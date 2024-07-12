@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+span
+{
+    background: url(algoprep.png);
+    /* background: url(icon.png); */
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    animation: animate 5s linear;
+    
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translate(-50%,-5000%);
+        opacity: 1;
+    }
+}
