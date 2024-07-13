@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+.unselectable {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard syntax */
+  }
+  
+
+
+html
+{
+    font-family:sans-serif;
+    /* color: white; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header-------------------------------- */
+header{
+    /* outline: 5px solid red; */
+    /* background-color: lightcoral; */
+    height: 5rem;
+    font-family: sans-serif;
+
+}
+
+.titlebar
+{
+    height: 50%;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 1rem;
+}
+
+.titleimg{
+    height: 80%;
+    /* Don't give width and height both to img give only heigth yato width */
+}
+
+/* Menu bar------------------------------- */
+.title{
+    font-size: 1rem;
+}
+
+.menubar{
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+    align-items: center;
+    /* outline: 2px solid green; */
+    height: 50%;
+    cursor: pointer;
+}
+
+
+
+/* Main------------------------------------------- */
+main
+{
+    background-color: black;
+    height: calc(100vh - 8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-btn{
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    border-radius: 4px;
+}
+
+.menu{
+    position: relative;
+    display: inline-block;
+}
+.menu-items
+{
+    background-color: rgb(238,238,238);
+    position: absolute;
+    /* left: 10px; */
+    /* top: 30px;
+    width: 9rem; */
+    display: none;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.menu-items li{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-items li:hover{
+    background-color: #ddd;
+}
+
+.menu:hover .menu-items{
+    display: block;
+}
+
+.menu:hover .menu-btn{
+    /* background-color: rgb(215, 204, 204); */
+    background-color:lightblue;
+}
+
+li
+{
+    padding: 0.25rem;
+}
+
+ul
+{
+    padding: 0;
+    list-style: none;
+}
+
+.videoInput{
+    display:none
+}
+
+.video{
+    height: 100%;
+}
+video.video{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast{
+    color: rgba(211, 205, 205, 0.931);
+    font-size: 2rem;
+    position: fixed;
+    top:99px;
+    right: 47px;
+}
+
+/* Footer--------------------------------------- */
+footer
+{
+    height: 3rem;
+    background-color: gray;
+}
+
+
+
+
+

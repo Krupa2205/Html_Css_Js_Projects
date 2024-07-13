@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLC Media Player</title>
+    <!-- For changing this application -->
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <!-- For specfic this application -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h2>VLC media player</h2> -->
+     <header>
+        <div class="titlebar">
+            <img class="titleimg" src="VLC.png" alt="vlc logo">
+            <h1 class="title">VLC Media Player</h1>
+        </div>
+
+
+        <div class="unselectable">
+            <!-- Your menu content here -->
+             <!-- ------------------------------- -->
+            <div class="menubar">
+                <div class="menu">
+                    <div class="menu-btn" id="videoBtn">Open</div>
+                    <input type="file" class="videoInput" id="videoInput">
+                    <!-- btn click -file get -->
+                </div>
+                <div class="menu">
+                    <div class="menu-btn">Playback</div>
+                    <ul class="menu-items">
+                        <li id="speedUp">SpeedUp</li>
+                        <li id="speedDown">SpeedDown</li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <!-- //dropdown -->
+                    <div class="menu-btn">Audio</div>
+                    <!-- //dropbtn -->
+                        <ul class="menu-items">
+                            <!-- //dropdown-content -->
+                            <li id="volumeUp">VolumeUp</li>
+                            <li id="volumeDown">VolumeDown</li>
+                        </ul>  
+                    </div>
+            </div>
+            <!--------------------------------- -->
+          </div>
+        <video id="myVideo"></video>
+
+     </header>
+
+
+     <main id="main">
+        <div class="toast">100%</div>
+
+     </main>
+
+
+     <footer></footer>
+     <script src="script.js"></script>
+</body>
+</html>
