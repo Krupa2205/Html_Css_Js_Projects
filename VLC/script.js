@@ -161,43 +161,43 @@ volumeDown.addEventListener("click", volumeDownHandler);
             const muteElem = document
 
 
-            // Add an event listener to the document object to capture keyboard events:
             document.addEventListener('keydown', handleKeyboardEvent);
 
             function handleKeyboardEvent(event) {
-                // Check which key was pressed
-                switch (event.key) {
-                  case 'ArrowUp':
-                    // Increase volume
-                    volumeUpHandler();
-                    break;
-                  case 'ArrowDown':
-                    // Decrease volume
-                    volumeDownHandler();
-                    break;
-                  case '+':
-                    // Increase playback speed
-                    speedUpHandler();
-                    break;
-                  case '-':
-                    // Decrease playback speed
-                    speedDownhandler();
-                    break;
-                    case ' ':
-                        // Toggle play/pause
-                        if (videoElement.paused) {
-                          handlePlay();
-                        } else {
-                          handlePause();
-                        }
-                        break;
-                    break;
-                  case '':
-                    // Toggle mute
-                    handleMute();
-                    break;
-                  default:
-                    // Do nothing for other keys
-                    break;
-                }
+              console.log('handleKeyboardEvent called');
+              console.log('event.key:', event.key);
+            
+              switch (event.key) {
+                case 'ArrowUp':
+                  console.log("ArrowUp pressed",event.key);
+                  volumeUpHandler();
+                  break;
+                case 'ArrowDown':
+                  console.log("ArrowDown pressed",event.key);
+                  volumeDownHandler();
+                  break;
+                case '+':
+                  console.log("+ pressed");
+                  speedUpHandler();
+                  break;
+                case '-':
+                  console.log("- pressed");
+                  speedDownHandler();
+                  break;
+                case ' ':
+                  console.log("Space pressed");
+                  if (videoElement.paused) {
+                    handlePlay();
+                  } else {
+                    handlePause();
+                  }
+                  break;
+                case 'm':
+                  console.log('m pressed');
+                  handleMute();
+                  break;
+                default:
+                  console.log('Unknown key pressed');
+                  break;
               }
+            }
