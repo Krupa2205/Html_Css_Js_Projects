@@ -1,0 +1,241 @@
+/* ***************header************** */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(238, 238, 238);
+}
+
+header {
+    height: 5rem;
+    background: linear-gradient(145deg, #c6c2c2, #ffffff);
+    box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.titlebar {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.title-img {
+    height: 10vh;
+    width: 100px;
+}
+
+.title {
+    font-size: 1rem;
+    color: #333;
+    text-shadow: 1px 1px 2px #aaa;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    width: 100%; 
+    text-align: center; 
+    padding: 0.5rem;
+    box-sizing: border-box; 
+
+}
+
+.menu-bar {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+    align-items: center;
+    height: 50%;
+}
+
+.menu {
+    position: relative;
+    padding: 0.5rem 1rem; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+}
+
+.menu:hover {
+    transform: translateY(-3px);
+    border: 1px solid rgb(7, 93, 133);
+    background-color: rgb(221, 244, 250);
+    cursor: pointer;
+}
+
+.menu-items {
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    top: 68%;
+    left: 20%;
+    width: 9rem;
+    display: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.menu:hover .menu-items {
+    display: block;
+}
+
+li {
+    padding: 0.25rem;
+}
+li:hover{
+background-color: rgb(172, 172, 172)
+}
+
+.videoInput {
+    display: none;
+}
+
+/* main element */
+main {
+    background-color: black;
+    height: calc(100vh - 10rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video {
+    height: 100%;
+}
+
+.toast {
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    top: 99px;
+    right: 47px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* footer */
+footer {
+    height: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(145deg, #e0e0e0, #ffffff);
+    box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.time-container>* {
+    text-align: center;
+}
+
+.current-time,.total-time {
+    width: 5%;
+    min-width: 44px;
+
+
+}
+
+.time-slider {
+    width: 90%;
+}
+
+.slider {
+    width: 100%;
+    opacity: 0.7;
+    appearance: none;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 10px #b0b0b0, inset -5px -5px 10px #ffffff;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(221, 218, 218);
+    border: 1px solid rgb(126, 124, 124);
+    height: 20px;
+    width: 20px;
+    box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    border: 1px solid rgb(7, 93, 133);
+    background-color: rgb(221, 244, 250);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btns {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    
+}
+
+i {
+    color: rgba(82, 82, 82, 0.843);
+    font-size: 14px;
+}
+
+.play_pause-container {
+    padding: 7px;
+    height: 25px;
+    width: 25px;
+    padding: 7px;
+
+}
+
+.rest-options {
+    display: flex;
+    gap: 0.3rem;
+    align-items: flex-end;
+}
+
+@media (max-width: 1000px) {
+    .time-slider {
+        width: 75%;
+    }
+
+    .time-container {
+        justify-content: space-evenly;
+    }
+
+   
+}
